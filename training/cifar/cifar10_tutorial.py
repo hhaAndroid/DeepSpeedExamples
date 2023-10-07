@@ -113,9 +113,9 @@ dataiter = iter(trainloader)
 images, labels = next(dataiter)
 
 # show images
-imshow(torchvision.utils.make_grid(images))
-# print labels
-print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
+# imshow(torchvision.utils.make_grid(images))
+# # print labels
+# print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
 
 ########################################################################
 # 2. Define a Convolutional Neural Network
@@ -222,8 +222,8 @@ dataiter = iter(testloader)
 images, labels = next(dataiter)
 
 # print images
-imshow(torchvision.utils.make_grid(images))
-print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
+# imshow(torchvision.utils.make_grid(images))
+# print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
 
 ########################################################################
 # Next, let's load back in our saved model (note: saving and re-loading the model

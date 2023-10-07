@@ -5,6 +5,7 @@ import argparse
 import deepspeed
 from deepspeed.accelerator import get_accelerator
 
+# https://www.deepspeed.ai/tutorials/cifar-10/
 
 def add_argument():
 
@@ -106,7 +107,7 @@ def add_argument():
         'Datatype used for training'
     )
 
-    # Include DeepSpeed configuration arguments
+    # 加入 deepspeed 需要的一些配置进去
     parser = deepspeed.add_config_arguments(parser)
 
     args = parser.parse_args()
@@ -179,9 +180,9 @@ dataiter = iter(trainloader)
 images, labels = next(dataiter)
 
 # show images
-imshow(torchvision.utils.make_grid(images))
-# print labels
-print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
+# imshow(torchvision.utils.make_grid(images))
+# # print labels
+# print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
 
 ########################################################################
 # 2. Define a Convolutional Neural Network
@@ -385,8 +386,8 @@ dataiter = iter(testloader)
 images, labels = next(dataiter)
 
 # print images
-imshow(torchvision.utils.make_grid(images))
-print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
+# imshow(torchvision.utils.make_grid(images))
+# print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
 
 ########################################################################
 # Okay, now let us see what the neural network thinks these examples above are:

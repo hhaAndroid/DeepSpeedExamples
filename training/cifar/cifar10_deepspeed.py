@@ -108,7 +108,7 @@ def add_argument():
     )
 
     # 加入 deepspeed 需要的一些配置进去
-    parser = deepspeed.add_config_arguments(parser)
+    parser = deepspeed.add_config_arguments(parser) #
 
     args = parser.parse_args()
 
